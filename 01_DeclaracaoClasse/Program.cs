@@ -23,7 +23,6 @@ namespace _01_DeclaracaoClasse
 
             Console.WriteLine("------------------");
 
-            // Instancias e chamadas para a classe Retangulo
             Retangulo obj3 = new Retangulo();
             obj3.Largura = 5;
             obj3.Altura = 10;
@@ -36,7 +35,6 @@ namespace _01_DeclaracaoClasse
 
             Console.WriteLine("------------------");
 
-            // Instancias e chamadas para a classe Circulo
             Circulo obj5 = new Circulo();
             obj5.Raio = 10;
             obj5.ImprimirArea();
@@ -47,7 +45,6 @@ namespace _01_DeclaracaoClasse
 
             Console.WriteLine("------------------");
 
-            // Instancias e chamadas para a classe Triangulo
             Triangulo obj7 = new Triangulo();
             obj7.Base = 8;
             obj7.Altura = 12;
@@ -57,6 +54,25 @@ namespace _01_DeclaracaoClasse
             obj8.Base = 15.5;
             obj8.Altura = 10.2;
             obj8.ImprimeArea();
+
+            Console.WriteLine("------------------");
+
+            Conta contaElias = new Conta();
+            contaElias.Banco = 237;
+            contaElias.Agencia = "003-7";
+            contaElias.Numero = "999520-7";
+            contaElias.Saldo = 0.00;
+            contaElias.Limite = 500.00;
+
+            contaElias.Depositar(1050.55);
+            Console.WriteLine($"Saldo Atual: {contaElias.ConsultaSaldo()}");
+
+            contaElias.Sacar(200.00);
+            Console.WriteLine($"Saldo Atual: {contaElias.ConsultaSaldo()}");
+
+            Console.WriteLine("------------------");
+
+            
 
             Console.ReadKey();
         }
@@ -121,6 +137,58 @@ namespace _01_DeclaracaoClasse
         {
             Console.WriteLine($"Triângulo com base de {Base:N2} e altura de {Altura:N2} possui uma área de {CalculaArea():N2}");
         }
+    }
+    public class Conta
+    {
+        public int Banco;
+        public string Agencia, Numero;
+        public double Saldo, Limite;
+        public void Depositar(double valor) 
+        {
+            Saldo += valor;
+        }
 
+        public void Sacar(double valor)
+        {
+            if (valor <= 0) ;
+            else if (valor > Saldo) ;
+            else
+            Saldo -= valor;
+        }
+
+        public double ConsultaSaldo() 
+        {
+            return Saldo;
+        }
+    }
+    public class Aluno
+    {
+        public int Codigo;
+        public string Nome;
+        public double[] Notas;
+
+        public void LancarNota(int trimestre,double nota)
+        {
+            Notas[trimestre - 1] = nota;
+        }
+
+        public double CalcularMedia()
+        {
+            double media = 0;
+
+            foreach (double nota in Notas)
+            {
+                media += nota;
+            }
+            return media / 4.0;
+        }
+
+        public string Mencao()
+        {
+            if (CalcularMedia() >= 5.0)
+                return "Aprovado";
+            else
+                return "Reprovado";
+        }
     }
 }
