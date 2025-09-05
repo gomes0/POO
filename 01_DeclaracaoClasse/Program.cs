@@ -72,7 +72,16 @@ namespace _01_DeclaracaoClasse
 
             Console.WriteLine("------------------");
 
-            
+            Aluno alunoElias = new Aluno();
+
+            alunoElias.Codigo = 1;
+            alunoElias.Nome = "Elias Gomes";
+            alunoElias.LancarNota(1, 8.6);
+            alunoElias.LancarNota(2, 9.0);
+            alunoElias.LancarNota(3, 9.5);
+            alunoElias.LancarNota(4, 10.0);
+
+            Console.WriteLine($"Aluno {alunoElias.Nome} {alunoElias.Mencao()} com média de {alunoElias.CalcularMedia():N2}");
 
             Console.ReadKey();
         }
@@ -152,7 +161,6 @@ namespace _01_DeclaracaoClasse
         {
             if (valor <= 0) ;
             else if (valor > Saldo) ;
-            else
             Saldo -= valor;
         }
 
@@ -165,7 +173,7 @@ namespace _01_DeclaracaoClasse
     {
         public int Codigo;
         public string Nome;
-        public double[] Notas;
+        public double[] Notas = new double[4];
 
         public void LancarNota(int trimestre,double nota)
         {
@@ -185,10 +193,15 @@ namespace _01_DeclaracaoClasse
 
         public string Mencao()
         {
-            if (CalcularMedia() >= 5.0)
+            /*if (CalcularMedia() >= 5.0)
+            {
                 return "Aprovado";
+            }
             else
+            {
                 return "Reprovado";
+            }*/
+            return CalcularMedia() >= 5.0 ? "Aprovado" : "Reprovado";
         }
     }
 }
