@@ -39,17 +39,21 @@ namespace _02_Construtores
         //pode ser acessado apenas dentro da Classe
         private int Lado;
 
-        //Overloadm(Sobrecarga) de Construtor
-        public Quadrado()
+        //Overload(Sobrecarga) de Construtor
+        //Declarar mais de um construtor com lista de argumentos diferentes
+        //this(5) aciona o construtor que recebe um parâmetro
+        public Quadrado():this(5)
         {
-            this.Lado = 5;
+            //this.Lado = 5;
         }
 
-        //O Construtor serve para instanciar o objeto e Inicializar os atributos
+        //O Construtor serve para instanciar o objeto
+        //Inicializar os atributos
         public Quadrado(int lado)
         {
             //this: acessa o membro da classe
-            this.Lado = lado;
+            if(Lado > 0)
+                this.Lado = lado;
         }
 
         public int CalculaArea()
