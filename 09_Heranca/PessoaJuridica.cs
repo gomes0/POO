@@ -10,7 +10,7 @@ namespace _09_Heranca
     {
         public string CNPJ;
 
-        public override string GetDocument()
+        public override string GetDocumento()
         {
             return $"CNPJ: {this.CNPJ}";
         }

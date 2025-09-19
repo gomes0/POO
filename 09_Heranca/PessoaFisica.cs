@@ -10,7 +10,7 @@ namespace _09_Heranca
     {
         public string CPF;
 
-        public override string GetDocument()
+        public override string GetDocumento()
         {
             return $"CPF:{this.CPF}";
         }
