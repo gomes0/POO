@@ -30,10 +30,37 @@ namespace _10_Colecoes
                 Console.WriteLine($" - {nome}");
             }
 
-            Console.WriteLine("Impressão dos alunos");
+            Console.WriteLine("\nImpressão dos alunos");
             foreach(Aluno aluno in alunos)
             {
                 //Console.WriteLine($" - ID: {aluno.id} Nome: {aluno.Nome}");
+                aluno.ImprimirAluno();
+            }
+
+            Dictionary<int, String> dicNomes = new Dictionary<int, String>();
+            dicNomes.Add(1, "Gustavo");
+            dicNomes.Add(2, "Celso");
+            dicNomes.Add(3, "Suely");
+            // Não adiciona chave duplicada no Dicionario
+            //dicNomes.Add(3, "Suely");
+
+            Console.WriteLine("\nImpressão dos alunos");
+            for (int i = 1; i <= dicNomes.Count; i++)
+            {
+                Console.WriteLine($"{dicNomes[i]}");
+            }
+
+            Dictionary<int, Aluno> dicAlunos = new Dictionary<int, Aluno>();
+            dicAlunos.Add(suely.id, suely);
+            dicAlunos.Add(celso.id, celso);
+
+            Console.WriteLine("Impressão dos dicAlunos");
+            //for(int i = 1; i <= dicAlunos.Count; i++)
+            //{
+            //    dicAlunos[i].ImprimirAluno();
+            //}
+            foreach(Aluno aluno in dicAlunos.Values)
+            {
                 aluno.ImprimirAluno();
             }
         }
