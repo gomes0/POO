@@ -54,7 +54,7 @@ namespace _10_Colecoes
             dicAlunos.Add(suely.id, suely);
             dicAlunos.Add(celso.id, celso);
 
-            Console.WriteLine("Impressão dos dicAlunos");
+            Console.WriteLine("\nImpressão dos dicAlunos");
             //for(int i = 1; i <= dicAlunos.Count; i++)
             //{
             //    dicAlunos[i].ImprimirAluno();
@@ -62,6 +62,47 @@ namespace _10_Colecoes
             foreach(Aluno aluno in dicAlunos.Values)
             {
                 aluno.ImprimirAluno();
+            }
+
+            Queue <String> filaNomes = new Queue<String> ();
+            filaNomes.Enqueue("Gustavo");
+            filaNomes.Enqueue("Celso");
+            filaNomes.Enqueue("Suely");
+
+            Console.WriteLine("\nImpressão dos filaNomes");
+            Console.WriteLine($" 1) {filaNomes.Dequeue()}");
+
+            foreach(String nome in filaNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+
+            Stack<String> stackNomes = new Stack<String> ();
+            stackNomes.Push("Gustavo");
+            stackNomes.Push("Celso");
+            stackNomes.Push("Suely");
+
+            Console.WriteLine("\nImpressão dos stacksNomes");
+            Console.WriteLine($" 1) {stackNomes.Pop()}");
+
+            foreach(String nome in stackNomes)
+            {
+                Console.WriteLine($" - {nome}");
+            }
+
+            HashSet<String> setNomes = new HashSet<string> ();
+            setNomes.Add("Gustavo");
+            setNomes.Add("Celso");
+            setNomes.Add("Suely");
+            //Ignora valores duplicados
+            setNomes.Add("Gustavo");
+            setNomes.Add("Celso");
+            setNomes.Add("Suely");
+
+            Console.WriteLine("\nImpressão do setNomes");
+            foreach(String nome in setNomes)
+            {
+                Console.WriteLine($" - {nome}");
             }
         }
     }
