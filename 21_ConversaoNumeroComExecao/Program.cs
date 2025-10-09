@@ -7,16 +7,20 @@ public class Program
         Console.Write("Digite um número inteiro: ");
         string entrada = Console.ReadLine();
 
-        try
+        while (true)
         {
-            int numero = int.Parse(entrada);
-            int dobro = numero * 2;
-            Console.WriteLine($"O dobro do valor é: {dobro}");
+            try
+            {
+                int numero = int.Parse(entrada);
+                int dobro = numero * 2;
+                Console.WriteLine($"O dobro do valor é: {dobro}");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Valor inválido! Digite apenas números inteiros.");
+            }
+
+            break;
         }
-        catch (Exception)
-        {
-            Console.WriteLine("Valor inválido! Digite apenas números inteiros.");
-        }
-        Console.WriteLine("\nFim do programa.");
     }
 }
