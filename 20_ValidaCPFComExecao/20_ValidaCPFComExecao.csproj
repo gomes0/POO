@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE397915-710A-40D6-AB59-0258E929860B}</ProjectGuid>
+    <ProjectGuid>{69300495-F174-4683-A86D-C6BC107E2147}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_17_Calendario</RootNamespace>
-    <AssemblyName>17_Calendario</AssemblyName>
+    <RootNamespace>_20_ValidaCPFComExecao</RootNamespace>
+    <AssemblyName>20_ValidaCPFComExecao</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calendario.cs" />
-    <Compile Include="Enum.cs" />
-    <Compile Include="Feriado.cs" />
+    <Compile Include="CNPJ.cs" />
+    <Compile Include="CPF.cs" />
+    <Compile Include="CPFMesmoNumeroException.cs" />
+    <Compile Include="CPFqtdDigitoException.cs" />
+    <Compile Include="IDocumento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

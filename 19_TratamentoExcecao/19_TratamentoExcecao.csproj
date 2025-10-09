@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE397915-710A-40D6-AB59-0258E929860B}</ProjectGuid>
+    <ProjectGuid>{486E5DBA-90CE-42D4-9967-9B3595F4786E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_17_Calendario</RootNamespace>
-    <AssemblyName>17_Calendario</AssemblyName>
+    <RootNamespace>_19_TratamentoExcecao</RootNamespace>
+    <AssemblyName>19_TratamentoExcecao</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calendario.cs" />
-    <Compile Include="Enum.cs" />
-    <Compile Include="Feriado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
