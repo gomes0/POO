@@ -144,17 +144,17 @@ namespace _17_Calendario
             DateTime sextaFeiraSanta = domingoDePascoa.AddDays(-2);
             DateTime CorpuChrist = domingoDePascoa.AddDays(60);
 
-            if (domingoDePascoa.Month == )
-                feriados.Add (new Feriado( domingoDePascoa.Day,"Páscoa"));
+            if ((Mes)domingoDePascoa.Month == mes)
+                feriados.Add(new Feriado(domingoDePascoa.Day, "Páscoa"));
 
-            if (carnaval.Month == mes)
-                feriados.Add (new Feriado( carnaval.Day,"Carnaval"));
+            if ((Mes)carnaval.Month == mes)
+                feriados.Add(new Feriado(carnaval.Day, "Carnaval"));
 
-            if (sextaFeiraSanta.Month == mes)
-                feriados.Add (new Feriado(sextaFeiraSanta.Day,"Sexta Feira Santa"));
+            if ((Mes)sextaFeiraSanta.Month == mes)
+                feriados.Add(new Feriado(sextaFeiraSanta.Day, "Sexta Feira Santa"));
 
-            if (CorpuChrist.Month == mes)
-                feriados.Add (new Feriado( CorpuChrist.Day, "Corpus Christi"));
+            if ((Mes)CorpuChrist.Month == mes)
+                feriados.Add(new Feriado(CorpuChrist.Day, "Corpus Christi"));
 
             //Array.Sort(feriados);
 
